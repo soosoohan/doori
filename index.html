@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YZHC1G9FN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4YZHC1G9FN');
+    </script>
+
+<meta charset="UTF-8">
+<title>Doori Moeum - Two Player Korean hangman | Soosooland</title>
+    
+    <!-- SEO Meta Tags -->
+<meta name="description" content="Challenge a friend in this Korean vowel puzzle game. Compete to guess consonants and complete words. Two player mode available.">
+<meta name="keywords" content="수수랜드, 초성 퀴즈, 모음 퀴즈, 행맨, hangman, korean hangman, multiplayer puzzle, educational game, hangul quiz, korean word game">
+<meta name="author" content="Soosooland">
+
+    <!-- Open Graph -->
+<meta property="og:title" content="Doori Moeum - Two Player Korean Puzzle">
+<meta property="og:description" content="Challenge a friend in this Korean vowel puzzle game. Two player competitive mode.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://soosooland.com/doori/">
+<meta property="og:image" content="https://soosooland.com/images/moeum.jpeg">
+<meta property="og:site_name" content="Soosooland">
+<link rel="canonical" href="https://soosooland.com/doori/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Doori Moeum",
+  "description": "Two player Korean vowel guessing game",
+  "url": "https://soosooland.com/doori/",
+  "genre": "Puzzle",
+  "gamePlatform": "Web browser",
+  "playMode": "MultiPlayer",
+  "numberOfPlayers": 2,
+  "inLanguage": ["en", "ko"]
+}
+</script>
+
+<style>
+  * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif; 
+      background: #145454;   
+      text-align: center;
+      padding: 30px;
+      margin: 0;
+    }
+
+  h1 { font-size: 1.5em; margin-bottom:0;color: #b4f0f0; }
+  h2 { font-size:1.2em; color: white; }
+
+  header > div {
+    color:#fff;
+    line-height: 140%;
+    margin:30px auto;
+  }
+    header > div {
+      color: #fff;
+      line-height: 140%;
+      margin: 30px auto;
+    }
+
+    header {
+      min-height: 380px;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 1.5em;
+      margin-bottom: 0;
+      color: #EF0;;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      color: white;
+    }
+
+    .game_container {
+      background-color: #0E756D;
+      color: #fff;
+      width: 90%;
+ max-width:800px;      
+margin: auto;
+      padding: 20px;
+      border-radius: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .game-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .game-buttons button {
+      width: 200px;
+      height: 52px;
+      padding: 16px 0;
+      font-size: 1.1em;
+      cursor: pointer;
+      border: none;
+      background-color: #CFF9FF;
+      color: #0A6A79;
+      border-radius: 12px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 5px;
+    }
+
+    .game-buttons button:hover {
+      background-color: #1baf8f;
+      color: #fff;
+    }
+
+.square-button {
+            width: 250px;
+            height: 45px;
+            background-color: #FFB3D9; /* 연분홍 */
+            color: white;
+            border: none;
+            border-radius: 12px; /* 둥근 모서리 */
+            cursor: pointer;
+            font-size: 1.1rem; /*크기 고정 */
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.2;
+            margin: 8px;
+            transition: all 0.3s ease;
+            font-family: Arial, sans-serif;
+        }
+
+    .square-button:hover {
+        background-color: #FF8FAB; /* 호버 시 진한 분홍 */
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .square-button:active {
+        transform: scale(0.95);
+    }
+
+    .credits {
+      font-size: 0.9em;
+      margin-top: 40px;
+      color:#a7fff0;
+      max-width: 250px;
+      margin: 40px auto;
+      line-height: 1.5;
+    }
+
+    /* 반응형 레이아웃 */
+    @media (min-width: 800px) {
+      .game-buttons button {
+        flex: 0 0 calc(33.333% - 20px); /* 3줄 */
+        max-width: 200px;
+      }
+    }
+
+    @media (max-width: 799px) and (min-width: 500px) {
+      .game-buttons button {
+        flex: 0 0 calc(50% - 20px); /* 2줄 */
+        max-width: 200px;
+      }
+    }
+
+    @media (max-width: 499px) {
+      .game-buttons button {
+        flex: 0 0 calc(100% - 20px); /* 1줄 */
+        max-width: 280px;
+      }
+      
+      .game_container {
+        width: 95%;
+      }
+    }
+
+</style>
+
+</head>
+
+<body>
+    <div class="blackboard">
+        <div class="moeum-main" id="moeum-main">
+            <h1 class="chalk-text main-title">둘이 모음</h1>
+</div><br><h2>Korean Hangman  </h2>
+<h2>둘이 모음은  자음을 추리해서 단어, 구절, 문장을 완성하는 게임이에요.</h2>
+    <h2>두 사람이 교대로 클릭하며 , 자음을 맞추면 턴을 유지합니다.</h2>
+    
+        </div>       
+<p style="color: #8ee8e8;">
+- 모음은 모두 공개된 상태에서 게임이 시작됩니다.<br>
+- 화면 아래 자음 버튼을 클릭해 해당 자음이 포함되어 있는지 추리합니다.<br>
+- 정답을 맞추면 해당 위치에 표시되고 턴이 유지됩니다.<br>
+- 정답을 틀리면 자음은 색이 변하고, 턴이 바뀝니다.<br>
+- 모든 자음을 다 찾을 때까지 계속되고, 다 찾으면 맞춘 자음 수에 따라 승패가 결정됩니다. <br>
+- 위에 있는 버튼들은 쉽고, 아래로 내려갈수록 어려워집니다.<br><br>
+- The game starts with all vowels revealed.<br>
+- Click the consonant buttons at the bottom to guess if the consonant is in the sentence.<br>
+- If you guess correctly, it will be marked in that position and you keep your turn.<br>
+- If you guess incorrectly, the consonant changes color and the turn switches to the other player.<br>
+- The game continues until all consonants are found, and when all are found,<br> the winner is determined based on the number of consonants each player guessed correctly.<br>
+- The buttons at the top are easier.</p>
+
+
+    </div></div>
+
+  <div class="game_container">
+      <div class="game-buttons">
+        <button onclick="location.href='https://soosoofile.vercel.app/doori26.html'">일상 대화</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori01.html'">속담 힌트있음</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori28.html'">속담 격언</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori21.html'">어린이 힌트있음</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori22.html'">어른용 힌트있음</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori23.html'">음식 힌트</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori24.html'">음식</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori30.html'">초등학교 국사</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori25.html'">한국 여행</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori19.html'">사자성어 힌트있음</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori29.html'">대륙 나라 수도</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori36.html'">중학교 국사</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori34.html'">동물 식물</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori27.html'">저자와 저서</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori37.html'">고유어</button>
+        <button onclick="location.href='https://soosoofile.vercel.app/doori38.html'">영화드라마</button>
+        
+      </div>
+  </div>
+<br>
+  <div class="credits">       
+<button class="square-button" onclick="location.href='https://soosooland.com'">
+    즐거운 퍼즐, 수수랜드
+</button>
+<p> © 2025 Soosoo Han. All rights reserved.</p>
+    </div>
+</body>
+</html>
