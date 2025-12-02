@@ -41,9 +41,10 @@ This is a Korean language puzzle game where players guess the hidden consonants 
 - 둘이 모음은 두 사용자가 대결하는 모음퀴즈이고  게임이 끝났을 때 많이 맞춘 사용자가 이깁니다.
   Doori Moeum is a two-player competitive version of the vowel quiz where users compete against each other, and whoever gets more correct answers wins.   
 
-| 사용자 user    | 👤혼자 하기   | 👤🆚👤사용자 2인 대결 |
-|------------------|--------------|----------------|
-|  게임 Game| 모음퀴즈 Moeum-quiz         |  둘이 모음 Doori-moeun          |
+| 사용자 user    | 👤혼자 하기 |👤혼자 하기   | 👤🆚👤사용자 2인 대결 |  👤혼자 하기|
+|---------|---------|--------------|---------|-------|
+|  게임 Game| 모음퀴즈 Moeum-quiz |모음 라운드Moeum Round  |  둘이 모음 Doori-moeun |하루모음 Haroo Moeum     |
+|게임 종료|6회 틀리거나 정답을 맞추면 |100점 만점 |정답을 맞출 때까지| 6회 틀리거나 정답을 맞추면|
 
 ---
 ## ⚠️ **Copyright Protection   
