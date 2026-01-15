@@ -225,9 +225,25 @@
         <button onclick="location.href='https://soosoofile.vercel.app/doori37.html'">고유어 힌트 있음</button>
         <button onclick="location.href='https://soosoofile.vercel.app/doori38.html'">영화드라마</button>
         <button onclick="location.href='https://soosoofile.vercel.app/doori03.html'">커피 힌트 있음</button>
-        <button onclick="location.href='https://soosoofile.vercel.app/doori04.html'">대한민국 헌법</button>
-        
-      </div>
+        <button onclick="playGame('book', '저자와 저서')">저자와 저서</button>
+          
   </div>
+</div>
+<script>
+function playGame(wordpool, title) {
+  // Vercel 게임 파일 주소
+  const gameUrl = 'https://soosoofile.vercel.app/doori.html';
+  
+  // 워드풀 파일 주소
+  const wordpoolUrl = `https://soosooland.com/doori/wordpools/${wordpool}.json`;
+  
+  // 제목이 있으면 title 파라미터 추가, 없으면 빈 문자열
+  const titleParam = title ? `&title=${encodeURIComponent(title)}` : '';
+  
+  // 게임 페이지로 이동
+  location.href = `${gameUrl}?wordpool=${encodeURIComponent(wordpoolUrl)}${titleParam}`;
+}
+</script>
+
 </body>
 </html>
