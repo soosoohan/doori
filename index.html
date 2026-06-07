@@ -116,6 +116,7 @@
     h2 {
       font-size: 1.2em;
       color: white;
+      text-align: left;
     }
 
     .game_container {
@@ -225,29 +226,32 @@ margin-top: 30px;
     <div class="blackboard">
         
      <div class="language-toggle">
-                <button class="language-button active" onclick="toggleLanguage('ko')">한국어</button>
-                <button class="language-button" onclick="toggleLanguage('en')">English</button>
+                <button class="language-button active" onclick="toggleLanguage('ko')">한</button>
+                <button class="language-button" onclick="toggleLanguage('en')">EN</button>
             </div>
-        <div class="moeum-main" id="moeum-main">
+<div style="max-width: 600px; margin: 0 auto;">
+ <div class="moeum-main" id="moeum-main">
 <div id="korean-description"> 
-<h1 class="chalk-text main-title">둘이 모음</h1>
+<h1 class="chalk-text main-title">둘이 모음</h1><br>
 <h2>둘이 모음은  자음을 추리해서 단어, 구절, 문장을 완성하는 게임이에요.</h2>
 <h2>두 사람이 교대로 클릭하며 , 자음을 맞추면 턴을 유지합니다.</h2>
-<p style="color: #8ee8e8;">
+<p style="color: #8ee8e8; text-align: left; padding-left: 20px;">
+
 - 모음은 모두 공개된 상태에서 게임이 시작됩니다.<br>
 - 화면 아래 자음 버튼을 클릭해 해당 자음이 포함되어 있는지 추리합니다.<br>
 - 정답을 맞추면 해당 위치에 표시되고 턴이 유지됩니다.<br>
 - 정답을 틀리면 자음은 색이 변하고, 턴이 바뀝니다.<br>
 - 모든 자음을 다 찾을 때까지 계속되고, 다 찾으면 맞춘 자음 수에 따라 승패가 결정됩니다. <br>
 - 위에 있는 버튼들은 쉽고, 아래로 내려갈수록 어려워집니다.<br><br>
-- The game starts with all vowels revealed.<br>
+
 </p>
     
 </div>
 <div id="english-description" class="hidden">
-<h1 class="chalk-text main-title">Doori Moeum</h1>
+<h1 class="chalk-text main-title">Doori Moeum</h1><br>
 <h2>Korean Hangman  </h2>
-<p style="color: #8ee8e8;">
+<p style="color: #8ee8e8; text-align: left; padding-left: 20px;">
+- The game starts with all vowels revealed.<br>
 - Click the consonant buttons at the bottom to guess if the consonant is in the sentence.<br>
 - If you guess correctly, it will be marked in that position and you keep your turn.<br>
 - If you guess incorrectly, the consonant changes color and the turn switches to the other player.<br>
@@ -255,7 +259,8 @@ margin-top: 30px;
 - The buttons at the top are easier.</p>
 
  </div>
-                
+  </div>
+              
 </div><br>
             
         </div>       
@@ -282,10 +287,11 @@ margin-top: 30px;
         <button onclick="playGame('proverb', '서양 속담')">서양 속담</button>
      
   </div>
-      <footer>
+      
+</div>
+<footer>
   <p>© 2025 Han Soosoo. All rights reserved.</p>
 </footer>
-</div>
 <script>
     function toggleLanguage(lang) {
         const koreanDesc = document.getElementById('korean-description');
