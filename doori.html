@@ -1035,9 +1035,7 @@ function startRound() {
     updateStats();
 }
 
-
 function nextRound() {
-    
     if (currentRound >= totalRounds) {
         showFinalScore();
         return;
@@ -1045,6 +1043,7 @@ function nextRound() {
     
     currentRound++;
     startRound();
+    document.getElementById('consonantInput').focus();
 }
 
 function showFinalScore() {
@@ -1064,13 +1063,12 @@ function restartGame() {
     team2Score = 0;
     nextSentenceData = null;
     startRound();
+    document.getElementById('consonantInput').focus();
 }
 
-// 변경 후
 window.onload = async function () {
     const success = await loadWordpool();
     if (success) {
-        // 카테고리 제목 표시
         document.getElementById('categoryTitle').textContent = categoryTitle;
         
         createConsonantButtons();
