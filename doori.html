@@ -92,7 +92,7 @@ margin-bottom: 30px;
 background: rgba(255, 255, 255, 0.9);
 border-radius: 12px;
 box-shadow: 0 8px 32px rgba(74, 98, 138, 0.2);
-padding: 30px;
+padding: 20px;
 margin-bottom: 20px;
 }
 .round-section {
@@ -160,7 +160,7 @@ font-size: 3em;
 background: rgba(223, 242, 235, 0.3);
 padding: 15px;
 border-radius: 8px;
-min-height: 120px;
+min-height: 80px;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -252,7 +252,7 @@ margin-left: 10px;
 background: rgba(185, 229, 232, 0.6);
 border: 1px solid #7AB2D3;
 border-radius: 8px;
-padding: 15px;
+padding: 10px;
 margin-bottom: 20px;
 text-align: center;
 }
@@ -386,6 +386,8 @@ color: #e386c7;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     padding: 30px 30px 15px 30px;
+    margin: 0 auto 15px auto; 
+    max-width: 750px;     
     margin-bottom: 15px;
     text-align: center;
 }
@@ -439,10 +441,16 @@ margin-top: 30px;
     }
     .title {
         font-size: 1.8em;
-}
-
-  
+    }
+    .game-board {
+        padding: 15px;
+    }
+    .hint-section {
+        padding: 8px;
+    }
     .round-section {
+        padding: 10px;
+        margin-bottom: 8px;
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
@@ -453,8 +461,8 @@ margin-top: 30px;
     }  
   .sentence-area {
         font-size: 1.8em;
-        padding: 20px;
-        min-height: 80px;
+        padding: 10px;
+        min-height: 70px;
     }
 
     .consonant-grid {
@@ -511,14 +519,16 @@ margin-top: 30px;
 <body>
 <button class="back-button" onclick="location.href='https://soosooland.com/doori/index.html'">←</button>
 <div class="container">
-  <div class="header">
+ 
+ <div class="header">
     <h1 class="title">둘이 모음</h1>
     <p class="subtitle" id="categoryTitle">게임을 시작하세요</p>
 </div>
 
+
   <div class="game-board">
 
-<div class="round-section">
+  <div class="round-section">
   <div class="round-display">
     <span id="roundDisplay">라운드 1/10</span>
     <span id="currentTeam" style="color: #e386c7; margin-left: 10px;">● 1팀 차례</span>
@@ -526,7 +536,7 @@ margin-top: 30px;
   <div class="score-display" id="scoreDisplay">
     1팀: 0점 | 2팀: 0점
   </div>
-</div>
+  </div>
 
 
     <div class="hint-section">
@@ -534,27 +544,28 @@ margin-top: 30px;
       <div class="hint-text" id="hintText">게임을 시작하세요!</div>
     </div>
     <div class="sentence-display">
-      <div class="sentence-area" id="sentenceArea">
+    <div class="sentence-area" id="sentenceArea">
         게임을 시작하세요!
-      </div>
     </div>
+    </div>
+    
     <div id="winMessage" class="win-message" style="display: none;">
-      <div class="win-alert">
+    <div class="win-alert">
         🎉 정답! <span id="roundScore"></span>점 획득! 🎉
-      </div>
+    </div>
     <button class="next-round-btn" onclick="nextRound()">다음 라운드 →</button>
     </div>
-  </div>
+    </div>
  
-  <div id="finalMessage" class="final-message" style="display: none;">
+    <div id="finalMessage" class="final-message" style="display: none;">
     <div class="final-alert">
         🎊 게임 완료! 🎊<br>
         최종 점수: <span id="finalScore"></span>/100점
     </div>
-  </div>
-</div>
-  <div class="consonant-section">
-  <h3 class="consonant-title">
+    </div>
+    </div>
+    <div class="consonant-section">
+    <h3 class="consonant-title">
     <span class="title-text-desktop">자음을 클릭하거나 입력하세요 →</span>
     <span class="title-text-mobile">자음을 클릭하세요</span>
     <input type="text" 
@@ -566,22 +577,18 @@ margin-top: 30px;
        autocapitalize="off"
        spellcheck="false"
        name="consonant-input-random">
-</h3>
+    </h3>
     <div class="consonant-grid" id="consonantGrid">
         <!-- 자음 버튼들이 여기에 생성됩니다 -->
     </div>
-  
-</div>
+    </div>
   <div class="next-preview-section">
   <div class="next-preview-title">다음 라운드 :</div>
   <div class="next-preview-hint" id="nextHintText"></div>
   <div class="next-preview-area" id="nextPreviewArea"></div>
 </div>
 
-  
-  
-</div>
-  <footer>
+<footer>
   <p>© 2025 Han Soosoo. All rights reserved.</p>
 </footer>
 
