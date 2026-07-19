@@ -530,7 +530,6 @@ margin-top: 30px;
     <button class="next-round-btn" onclick="nextRound()">다음 라운드 →</button>
     </div>
   </div>
- <div class="next-preview" id="nextPreview">다음 문제: -</div>
  
   <div id="finalMessage" class="final-message" style="display: none;">
     <div class="final-alert">
@@ -978,7 +977,6 @@ function startRound() {
     roundScore = 0;
 
     document.getElementById('winMessage').style.display = 'none';
-    document.getElementById('loseMessage').style.display = 'none';
     document.getElementById('finalMessage').style.display = 'none';
     document.getElementById('hintText').textContent = currentHint;
 
