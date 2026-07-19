@@ -969,32 +969,31 @@ function startRound() {
     document.getElementById('nextHintText').textContent = `💡 ${nextSentenceData.hint}`;
     document.getElementById('nextPreviewArea').innerHTML = renderVowelSkeleton(nextSentenceData.text);
 
-
+    // 라운드 상태 초기화
     guessedConsonants = new Set();
     wrongConsonants = new Set();
     gameWon = false;
     gameLost = false;
     charStates = [];
     roundScore = 0;
-    
+
     document.getElementById('winMessage').style.display = 'none';
     document.getElementById('loseMessage').style.display = 'none';
     document.getElementById('finalMessage').style.display = 'none';
     document.getElementById('hintText').textContent = currentHint;
-    
-    
+
     // 라운드와 점수 업데이트
     document.getElementById('roundDisplay').textContent = `라운드 ${currentRound}/${totalRounds}`;
-    
+
     // 현재 팀 표시
     const currentTeam = currentRound % 2 === 1 ? 1 : 2;
     document.getElementById('currentTeam').textContent = `● ${currentTeam}팀 차례`;
-    
+
     // 점수 업데이트
     document.getElementById('scoreDisplay').textContent = 
         `1팀: ${team1Score}점 | 2팀: ${team2Score}점`;
-    
-    
+
+    // 문장 분해해서 charStates 구성
     for (let char of currentSentence) {
         if (char === ' ') {
             charStates.push({ isSpace: true });
