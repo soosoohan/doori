@@ -769,23 +769,26 @@ function createConsonantButtons() {
         grid.appendChild(button);
     });
     
-  // 자음 입력창 이벤트 리스너
-    const input = document.getElementById('consonantInput');
-    if (input) {
-        input.addEventListener('input', function(e) {
-            const value = e.target.value;
-            if (value) {
-                // 자음인지 확인
-                if (consonants.includes(value)) {
-                    handleConsonantClick(value);
-                }
-                // 100ms 후에 입력창 비우기
-                setTimeout(() => {
-                    e.target.value = '';
-                }, 100);
+// 자음 입력창 이벤트 리스너
+  const input = document.getElementById('consonantInput');
+if (input) {
+    // 자동으로 포커스 주기
+    input.focus();  
+    input.addEventListener('input', function(e) {
+        const value = e.target.value;
+        if (value) {
+            // 자음인지 확인
+            if (consonants.includes(value)) {
+                handleConsonantClick(value);
             }
-        });
-    }
+            // 100ms 후에 입력창 비우기
+            setTimeout(() => {
+                e.target.value = '';
+                input.focus(); // 입력 후에도 포커스 유지
+            }, 100);
+        }
+    });
+}
 }
 
     function showAnswer() {
