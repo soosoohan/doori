@@ -1048,7 +1048,7 @@ function nextRound() {
     
     currentRound++;
     startRound();
-    document.getElementById('consonantInput').focus();
+    document.getElementById('consonantInput').focus(); 
 }
 
 function showFinalScore() {
@@ -1069,8 +1069,9 @@ function restartGame() {
     team1Score = 0;
     team2Score = 0;
     nextSentenceData = null;
-    document.querySelector('.next-preview-section').style.display = 'block'; 
+    document.querySelector('.next-preview-section').style.display = 'block';
     startRound();
+    document.getElementById('consonantInput').focus();
 }
 
 window.onload = async function () {
