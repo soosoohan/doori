@@ -69,8 +69,8 @@
     }
    .language-toggle {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 12px;
+        right: 12px;
         background: rgba(255,255,255,0.9);
         padding: 8px;
         border-radius: 8px;
@@ -102,31 +102,11 @@
     .back-button img {width: 100%;height: 100%;object-fit: cover;display: block;}
 
     .back-button:active {transform: scale(0.92);transition: transform 0.1s;}
-header {
-    text-align: center;
-    margin-bottom: 40px;
-    padding-top: 20px;
-  }
 
   h1 { font-size: 1.5em; margin-bottom:0;color: #b4f0f0; }
   h2 { font-size:1.2em; color: white; }
 
-  header > div {
-    color:#fff;
-    line-height: 140%;
-    margin:30px auto;
-  }
-    header > div {
-      color: #fff;
-      line-height: 140%;
-      margin: 30px auto;
-    }
-
-    header {
-      min-height: 380px;
-      margin-bottom: 40px;
-    }
-
+    
     h1 {
       font-size: 1.5em;
       margin-bottom: 0;
@@ -218,23 +198,24 @@ margin-top: 30px;
         width: 95%;
       }
      .back-button {top: 10px;left: 10px;width: 40px;height: 40px;}
-}
+      }
 
 </style>
 </head>
 <body onload="initLanguage()">
+    <div class="language-toggle">
+       <button class="language-button active" onclick="toggleLanguage('ko')">한</button>
+       <button class="language-button" onclick="toggleLanguage('en')">EN</button>
+    </div>
+    
     <button class="back-button" onclick="location.href='https://soosooland.com/'" aria-label="수수랜드 홈으로">
     <img src="https://soosooland.com/images/home.png" alt="수수랜드 홈"></button>
         
-     <div class="language-toggle">
-                <button class="language-button active" onclick="toggleLanguage('ko')">한</button>
-                <button class="language-button" onclick="toggleLanguage('en')">EN</button>
-            </div>
     <div class="blackboard">
 <div style="max-width: 600px; margin: 0 auto;">
- <div class="moeum-main" id="moeum-main">
+<div class="moeum-main" id="moeum-main">
 <div id="korean-description"> 
-<h1 class="chalk-text main-title">둘이 모음</h1><br>
+<h1 class="chalk-text main-title">둘이 모음</h1>
 <h2>둘이 모음은  자음을 추리해서 단어, 구절, 문장을 완성하는 게임이에요.</h2>
 <h2>두 사람이 교대로 클릭하며 , 자음을 맞추면 턴을 유지합니다.</h2>
 <p style="color: #8ee8e8; text-align: left; padding-left: 20px;">
@@ -250,7 +231,7 @@ margin-top: 30px;
     
 </div>
 <div id="english-description" class="hidden">
-<h1 class="chalk-text main-title">Doori Moeum</h1><br>
+ <h1 class="chalk-text main-title">Doori Moeum</h1>
 <h2>Korean Hangman  </h2>
 <p style="color: #8ee8e8; text-align: left; padding-left: 20px;">
 - The game starts with all vowels revealed.<br>
