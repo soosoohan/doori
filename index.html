@@ -199,20 +199,18 @@ margin-top: 30px;
       .game_container {
         width: 95%;
       }
-     .back-button {top: 10px;left: 10px;width: 40px;height: 40px;}
+      .back-button { top: max(30px, env(safe-area-inset-top) + 10px); left: 10px;  width: 40px; height: 40px; }
       }
 
 </style>
 </head>
 <body onload="initLanguage()">
+    <button class="back-button" onclick="location.href='https://soosooland.com/'" aria-label="수수랜드 홈으로">
+    <img src="https://soosooland.com/images/home.png" alt="수수랜드 홈"></button>
     <div class="language-toggle">
        <button class="language-button active" onclick="toggleLanguage('ko')">한</button>
        <button class="language-button" onclick="toggleLanguage('en')">EN</button>
-    </div>
-    
-    <button class="back-button" onclick="location.href='https://soosooland.com/'" aria-label="수수랜드 홈으로">
-    <img src="https://soosooland.com/images/home.png" alt="수수랜드 홈"></button>
-        
+    </div>  
     <div class="blackboard">
 <div style="max-width: 600px; margin: 0 auto;">
 <div class="moeum-main" id="moeum-main">
