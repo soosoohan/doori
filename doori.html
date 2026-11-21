@@ -677,6 +677,15 @@ sentences = data.map(item => {
         }
         return shuffledSentences[sentenceIndex++];
     }
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    const btn = document.querySelector('.next-round-btn');
+    if (btn && btn.offsetParent !== null && !btn.disabled) {
+      e.preventDefault();
+      nextRound();
+    }
+  }
+});
 
     function containsConsonant(targetChar, consonant) {
         const consonantMap = {
