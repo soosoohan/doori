@@ -490,6 +490,14 @@ margin-top: 30px;
     .title-text-mobile {
         display: inline;
     }
+.final-image {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 15px auto 0;
+  border-radius: 12px;
+}
 
     .consonant-input {
         width: 60px;
@@ -556,6 +564,7 @@ margin-top: 30px;
         🎊 게임 완료! 🎊<br>
         최종 점수: <span id="finalScore"></span>
     </div>
+    <img src="doorimoeum.png" alt="둘이 모음 완료" class="final-image">
     <div style="margin-top: 15px; display: flex; gap: 10px; justify-content: center;">
     <button class="next-round-btn" style="flex: 1;" onclick="restartGame()">🔄 새 게임</button>
     <button class="next-round-btn" style="flex: 1;" onclick="location.href='https://soosooland.com/doori/index.html'">🏠 다른 게임</button>
@@ -1059,6 +1068,10 @@ function showFinalScore() {
 
     // 다음 라운드 미리보기 숨기기
     document.querySelector('.next-preview-section').style.display = 'none';
+
+    // 추가: 게임판과 자음 구역 숨기기
+    document.querySelector('.game-board').style.display = 'none';
+    document.querySelector('.consonant-section').style.display = 'none';
 }
 
 function restartGame() {
@@ -1067,6 +1080,12 @@ function restartGame() {
     team2Score = 0;
     nextSentenceData = null;
     document.querySelector('.next-preview-section').style.display = 'block';
+
+    // 추가: 게임판과 자음 구역 다시 보이기, 엔딩 메시지 숨기기
+    document.querySelector('.game-board').style.display = '';
+    document.querySelector('.consonant-section').style.display = '';
+    document.getElementById('finalMessage').style.display = 'none';
+
     startRound();
     document.getElementById('consonantInput').focus();
 }
