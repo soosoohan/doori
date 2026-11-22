@@ -115,19 +115,19 @@
 
     .back-button:active {transform: scale(0.92);transition: transform 0.1s;}
   
-.banner-title {
-      margin-top:60px;
-      margin-bottom:30px;
+.main-title {
+    margin: 60px 0 20px;
     font-size: 0;
 }
 
-.banner-title img {
+.main-title img {
     display: block;
     width: 100%;
     max-width: 900px;
     height: auto;
     margin: 0 auto;
 }
+
   h2 { font-size: clamp(1.1rem, 3.3vw, 1.3rem);
       text-align: left;
       color: white; }
@@ -248,12 +248,15 @@ margin-top: 30px;
        <button class="language-button active" onclick="toggleLanguage('ko')">한</button>
        <button class="language-button" onclick="toggleLanguage('en')">EN</button>
     </div>  
+<div class="header">
+    <h1 class="main-title">
+        <img src="banner.jpeg" alt="둘이 모음 Moeum Duel">
+    </h1>
+</div>
 
-
-  <div class="blackboard">
+<div class="blackboard">
 <div style="max-width: 600px; margin: 0 auto;">
 <div class="moeum-main" id="moeum-main">
-<h1 class="banner-title"><img src="https://soosooland.com/doori/banner.jpeg" alt="둘이 모음 Moeum Duel"></h1>
 <div id="korean-description"> 
 <h2>둘이 모음은  자음을 추리해서 단어, 구절, 문장을 완성하는 게임이에요.</h2>
 <h2>두 사람이 교대로 클릭하며 , 자음을 맞추면 턴을 유지합니다.</h2>
