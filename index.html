@@ -77,7 +77,7 @@
       font-family: Arial, sans-serif; 
       background: #145454;   
       text-align: center;
-      padding: 30px;
+      padding: 20px;
       margin: 0;
     }
 
@@ -127,7 +127,6 @@
         cursor: pointer;
         font-family: 'Pretendard', sans-serif;
         font-size: clamp(0.8rem, 2vw, 1rem);
-        transition: all 0.3s ease;
     }
 
     .language-button:hover {
@@ -251,6 +250,10 @@ margin-top: 30px;
 header { display: flow-root; height: auto !important; }
 .main-title { height: auto !important; }
 .main-title img { position: static !important; float: none !important; }
+@media (max-width: 480px) {  
+.back-button { width: 40px;height: 40px;}
+body { padding: 10px; }
+}
 
 </style>
 </head>
